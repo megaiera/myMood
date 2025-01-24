@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/style.css">
+     <script src="/js/script.js" defer> </script>
+     <title>MyMood app - Comment tu te sens aujourd'hui? - formation [front-end]</title>
+</head>
+
+<body>
+     <header>
+          <nav id="navbar">
+                          <hgroup id="logo"> <h1> MyMood</h1>
+                              <span>Comment tu te sens aujourd'hui?</span>
+                         </hgroup>
+                    
+                    <input type="button" name="profil" id="profil" value="Profil">
+                    <input type="button" name="deconnexion" id="btnDeco" value="Déconnexion">
+          </nav>
+     </header>   
+
+     <main>
+          <button class="returnBtn">Retour</button>
+               <div id="allContent"> 
+                    <div id="leftContainer">
+                              <h2 class="courseName"> </h2>
+                         
+                              <div id="alerts-container"> <!--ALERTES--> </div>
+
+                              <div id="averageMood-container">
+                                   <h2> Moyenne de la classe </h2>
+                                   <label for="moodRange"> <span class="averageMood"> 20</span> </label> 
+                                   <input type="range" name="moodRange" class="moodRange" min="0" max="100" step="5">
+                              </div>
+                    </div>
+                    <div id="allMood-container">
+                              <!-- <div class="moodEleve">
+                                   <h4 class="internName"> Nom du stagiaire </h4>
+                                   <div class="score"> <span>10</span> </div>
+                              </div> -->
+                    </div>
+               </div>
+     </main>
+     
+</body>
+</html>
