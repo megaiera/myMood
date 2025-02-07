@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/style.css">
+     <!-- <script src="/js/gestion.js" defer> </script> -->
+     <script src="/js/script.js" defer> </script>
+     <title>MyMood app - Comment tu te sens aujourd'hui? - gestion des stagiaires</title>
+</head>
+<body>
+     <header>
+          <nav id="navbar">
+               <hgroup id="logo"> <h1> MyMood</h1>
+                    <span>Comment tu te sens aujourd'hui?</span>
+               </hgroup>
+               <input type="button" name="profil" id="profilBtn" value="Profil">
+               <input type="button" name="logout" id="logoutBtn" value="Déconnexion">
+          </nav>
+     </header>
+     <main>
+          <a href="index.html" class="returnBtn"> Retour</a>
+          <div id="gestion_container">
+               <div id="filter_radio1">
+                    <ul id="filter_radiobtns" class="filter_radiobtns"> <!--FILTER MENU -->
+                    </ul>
+               </div>
+               <div id="filter_radio2">
+                         <li id="addCourse_Btns"> <!-- FONCTION AJOUTER UN NOUVEAU FILTRE -->
+                              <input type="text" class="filter_btns" name="addCourse_Btn" id="addCourseTextInput" minlength= "3" placeholder="Ajouter formation" required>
+                              <input type="button" onclick="createNewCourse()" value="&#10010" class="filter_btns" id="addCoursePlusBtn">
+                         </li>  
+               
+                         <li> <!-- FONCTION SUPPRIMER FILTRE -->
+                              <input type="button"  class="filter_btns" id="deleteFilterBtn" value="Supprimer">
+                         </li>
+               </div>
+                    <!-- </ul> -->
+               
+
+               <details id="addIntern_container">
+                    <summary> AJOUTER UN STAGIAIRE</summary>
+                    <form id="forms" action="#">
+                         <input type="text" name="addName" class="addIntern_label" id="addIntern_name" placeholder="Prénom">
+                         <input type="text" name="addSurname" class="addIntern_label" id="addIntern_surname" placeholder="Nom">
+
+                         <select name="formations" id="addIntern_selectCourse">
+                              <option class="addIntern_option" value="defaultCourse">Formation</option>
+                              <option class="addIntern_option" value="front">Front End</option>
+                              <option class="addIntern_option" value="back">Back End</option>
+                              <option class="addIntern_option" value="cda">CDA</option>
+                              <option class="addIntern_option" value="prepnum1">Prépa Numérique 1</option>
+                              <option class="addIntern_option" value="prepnum2">Prépa Numérique 2</option>
+                              <option class="addIntern_option" value="poa">POA</option>
+                         </select>
+
+                         <input type="email" name="addMail" id="addIntern_mail" placeholder="imts@institutsolacroup.com">
+                         <input type="submit" value="&#43" id="addIntern_createBtn">
+                    </form>
+               </details>
+
+               <div id="internsList_container"> 
+                    <ul id="internsList"> <!--LISTE STAGIAIRES-->
+
+                    </ul>
+                        <input type="button" name="deleteBtn" class="deleteBtn" value="Supprimer les stagiaires sélectionnés">
+               </div>
+          </div>          
+     </main>
+     
+</body>
+</html>
